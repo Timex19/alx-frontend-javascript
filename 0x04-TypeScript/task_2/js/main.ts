@@ -48,7 +48,9 @@ console.log(createEmployee(1000));
 
 console.log(createEmployee('$500'));
 
-const isDirector = (employee: Teacher | Director): boolean => employee instanceof Director;
+function isDirector(employee: DirectorInterface | TeacherInterface): employee is Director{
+    return (employee as Director).workDirectorTasks !== undefined;
+}
 
 const executeWork = (employee: Teacher | Director): string => {
     let res;
