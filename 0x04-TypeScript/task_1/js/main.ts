@@ -42,6 +42,8 @@ console.log(printTeacher('john', 'doe'));
 interface StudentClassInterface {
     firstName: string;
     lastName: string;
+    workOnHomework(): string;
+    displayName(): string;
 }
 
 interface StudentClassConstructorInterface {
